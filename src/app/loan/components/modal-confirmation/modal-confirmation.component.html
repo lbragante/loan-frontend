@@ -1,0 +1,18 @@
+<div *ngIf="showModal" class="black">
+    <div class="modal">
+        <h2>Confirma a contratação?</h2>
+        <div class="body">
+            <p>Contratante: <strong>{{ loanInfo.name }}</strong></p>
+            <p>Parcelas: <strong>{{ loanInfo.installments }}x de R$ {{
+                    loanInfo.valueInstallments.toLocaleString('pt-BR', { minimumFractionDigits: 2,
+                    maximumFractionDigits: 2 }) }}</strong></p>
+            <p>Total a pagar: <strong>R$ {{ loanInfo.total.toLocaleString('pt-BR', { minimumFractionDigits:
+                    2, maximumFractionDigits: 2 }) }}</strong>
+            </p>
+        </div>
+        <div class="buttons">
+            <button (click)="hireLoan()">Confirmar</button>
+            <button (click)="closeModal()">Cancelar</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    border-radius: $border-radius;
+    border: 1px solid darken($tertiary-color, 10%);
+    padding: .6em .8em;
+    font-size: 1.2em;
+    font-family: $font-family;
+    transition: $transition;
+}
+
+input.ng-touched.ng-invalid,
+select.ng-touched.ng-invalid {
+    border: 1.4px solid $error-color;
+}
+
+input.ng-touched.ng-valid,
+select.ng-touched.ng-valid {
+    border: 1.4px solid $success-color;
+}
+
+.validation-info {
+    color: $error-color;
+    margin-top: .3em;
+}
+
+button {
+    width: 100%;
+    padding: .6em .8em;
+    margin-top: .5em;
+    border-radius: $border-radius;
+    border: 0;
+    background: $primary-color;
+    color: #fff;
+    font-family: $font-family;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: $transition;
+}
+
+button:hover {
+    background-color: $secondary-color;
+}
+
+button:active {
+    background-color: darken($secondary-color, 20%);
+    transition: none;
+}
+
+button:disabled {
+    background-color: lighten($primary-color, 30%);
+    cursor: not-allowed;
+    transition: none;
+}

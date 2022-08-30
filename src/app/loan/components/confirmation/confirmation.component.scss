@@ -1,0 +1,22 @@
+@import "../../../../sass/variables";
+
+.confirmation {
+    padding: $spacing-lg 0;
+    background-color: $secondary-color;
+    color: $light-color;
+    height: 100vh;
+
+    h1 {
+        font-size: $font-size-title;
+        line-height: $line-height;
+    }
+
+    .body {
+        padding: $spacing-lg 0;
+        font-size: $font-size-subtitle;
+
+        strong {
+            color: $primary-color;
+        }
+    }
+}

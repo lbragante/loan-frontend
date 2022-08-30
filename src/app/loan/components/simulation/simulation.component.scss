@@ -1,0 +1,13 @@
+@import "../../../../sass/variables";
+
+.card {
+    padding: $spacing-md;
+    margin: $spacing-lg 0;
+    background-color: darken($secondary-color, 10%);
+    color: $light-color;
+    border-radius: $border-radius;
+
+    .body {
+        margin: $spacing-sm 0;
+    }
+}

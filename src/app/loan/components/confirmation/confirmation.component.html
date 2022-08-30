@@ -1,0 +1,15 @@
+<div class="confirmation animated fadeIn">
+    <div class="container">
+        <h1>O empréstimo foi realizado com sucesso! Veja abaixo o que você contratou:</h1>
+        <div class="body">
+            <p>Nome do contratante: <strong>{{ contractedLoan.name }}</strong></p>
+            <p>Parcelas: <strong>{{ contractedLoan.installments }}x de R$ {{
+                    contractedLoan.valueInstallments.toLocaleString('pt-BR', { minimumFractionDigits: 2,
+                    maximumFractionDigits: 2 })
+                    }}</strong></p>
+            <p>Total a pagar: <strong>R$ {{ contractedLoan.total.toLocaleString('pt-BR', { minimumFractionDigits: 2,
+                    maximumFractionDigits: 2 }) }}</strong>
+            </p>
+        </div>
+    </div>
+</div>

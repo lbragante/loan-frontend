@@ -1,0 +1,15 @@
+<div class="card" *ngIf="!simulationLoan.firstChange">
+    <h2>{{ simulationLoan.currentValue.name }}, segue a simulação do seu empréstimo</h2>
+    <div class="body">
+        <p>{{ simulationLoan.currentValue.installments }}x de R$ {{
+            simulationLoan.currentValue.valueInstallments.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</p>
+        <p>Total a pagar: R$ {{ simulationLoan.currentValue.total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}
+        </p>
+
+    </div>
+    <div>
+        <button (click)="confirmLoan()">Confirmar</button>
+    </div>
+
+    <app-modal-confirmation #modal [loanInfo]="loanInfo" [showModal]="showModal"></app-modal-confirmation>
+</div>

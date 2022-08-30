@@ -1,0 +1,18 @@
+@import 'sass/reset';
+@import 'sass/typography';
+@import 'sass/variables';
+@import 'sass/form';
+@import 'sass/animated';
+
+body {
+    background-color: $light-color;
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 30px;
+}

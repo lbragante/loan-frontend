@@ -1,0 +1,33 @@
+@import "../../../../sass/variables";
+
+.black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+
+    .modal {
+        padding: $spacing-md;
+        width: 500px;
+        height: max-content;
+        background-color: #fff;
+        color: #000;
+        border-radius: $border-radius;
+
+        .body {
+            padding: $spacing-md 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            column-gap: $spacing-md;
+        }
+    }
+}

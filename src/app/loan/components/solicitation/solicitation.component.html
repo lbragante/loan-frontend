@@ -1,0 +1,38 @@
+<section class="animated fadeIn">
+    <div class="container">
+        <h1>Solicite seu empréstimo</h1>
+        <form [formGroup]="formGetLoan" (ngSubmit)="sendSimulationLoan()">
+            <div class="form-group">
+                <label for="name">Nome do solicitante</label>
+                <input type="text" class="form-control shadow-none" id="name" placeholder="Nome do solicitante"
+                    formControlName="name" minlength="3" autofocus>
+                <span class="validation-info"
+                    *ngIf="!formGetLoan.controls['name'].valid && formGetLoan.controls['name']?.touched">Campo
+                    obrigatório</span>
+            </div>
+            <div class="form-group">
+                <label for="amount">Valor</label>
+                <input type="number" class="form-control shadow-none" id="amount" placeholder="Valor do empréstimo"
+                    formControlName="amount">
+                <span class="validation-info"
+                    *ngIf="!formGetLoan.controls['amount'].valid && formGetLoan.controls['amount']?.touched || formGetLoan.controls['amount'].errors?.minlength">Campo
+                    obrigatório</span>
+            </div>
+            <div class="form-group">
+                <label for="installments">Parcelas</label>
+                <input type="number" min="1" id="installments"
+                    placeholder="Parcelas" formControlName="installments">
+
+                <span class="validation-info"
+                    *ngIf="!formGetLoan.controls['installments'].valid && formGetLoan.controls['installments']?.touched || formGetLoan.controls['installments'].errors?.minlength">Campo
+                    obrigatório</span>
+            </div>
+
+            <div>
+                <button type="submit" [disabled]="formGetLoan.invalid">Simular empréstimo</button>
+            </div>
+        </form>
+
+        <app-simulation [simulationLoan]="response"></app-simulation>
+    </div>
+</section>
